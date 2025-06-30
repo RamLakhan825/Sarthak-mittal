@@ -2,62 +2,53 @@ import a73 from "../assets/73.png"; // Footer decorative image
 import a75 from "../assets/75.png"; // Main image (contact-related)
 import { FaDownload, FaBook } from "react-icons/fa";
 
-
 export default function Contact() {
   return (
     <>
-      <div className="bg-black text-white w-full px-6 lg:px-20 py-20 font-[Montserrat]">
-        <div className="flex flex-col lg:flex-row items-start gap-16">
+      <div className="bg-black text-white w-full px-4 lg:px-12 py-12 font-[Montserrat]">
+        <div className="flex flex-col lg:flex-row items-start gap-12">
           {/* Left - Image */}
-          <div className="flex-shrink-0 w-full lg:w-[40%] flex justify-center">
+          <div className="w-full lg:w-[40%] flex justify-center">
             <img
               src={a75}
               alt="Contact"
-              className="border-[5px] border-[#D0A151] shadow-inner shadow-black w-full max-w-[580px] h-auto object-cover"
+              className="border-[4px] border-[#D0A151] shadow-inner shadow-black w-full max-w-[480px] object-cover"
             />
           </div>
 
           {/* Right - Content */}
-          <div className="flex flex-col gap-6 w-full lg:w-[60%]">
-            {/* Tag Button */}
-            <button className="bg-[#FDAA5633] text-[#D0A151] font-bold text-[14px] px-6 py-2 rounded-full uppercase tracking-widest w-fit">
+          <div className="flex flex-col gap-4 w-full lg:w-[60%]">
+            <button className="bg-[#FDAA5633] text-[#D0A151] font-semibold text-[12px] px-5 py-1.5 rounded-full uppercase tracking-wider w-fit">
               Latest publications
             </button>
 
-            {/* Gradient Heading */}
-            <h2 className="text-[32px] md:text-[48px] font-bold leading-tight bg-gradient-to-r from-[#D0A151] to-white text-transparent bg-clip-text">
+            <h2 className="text-[26px] md:text-[34px] font-bold leading-snug bg-gradient-to-r from-[#D0A151] to-white text-transparent bg-clip-text">
               Mastering Success in Contact Centres
             </h2>
 
-            {/* Description */}
-            <p className="text-[18px] leading-[1.7] max-w-[700px]">
-              Unlock the secrets to exceptional customer service and operational
-              excellence. This comprehensive guide provides proven strategies, real-
-              world case studies, and actionable insights for contact centre leaders
-              and professionals.
+            <p className="text-[15px] leading-[1.6] text-gray-200 max-w-[640px]">
+              Unlock customer service excellence with strategic insights, practical examples, and action plans for leadership and digital transformation.
             </p>
 
-            {/* Bullet Points */}
-            <div className="flex flex-col gap-3 mt-2">
+            <div className="flex flex-col gap-2 mt-2">
               {[
                 "Strategic frameworks for contact centre optimization",
                 "Real-world case studies and best practices",
                 "Leadership techniques for team excellence",
-                "Technology integration and digital transformation",
+                "Technology integration and transformation",
               ].map((point, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-2 h-2 mt-2 rounded-full bg-[#FDAA56] flex-shrink-0"></div>
-                  <span className="text-white text-[16px]">{point}</span>
+                <div key={i} className="flex items-start gap-2">
+                  <div className="w-2 h-2 mt-2 rounded-full bg-[#FDAA56]" />
+                  <span className="text-white text-[14px]">{point}</span>
                 </div>
               ))}
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-6 mt-8">
-              <button className="bg-[#D0A151] text-black px-8 py-3 rounded-full flex items-center gap-3 font-semibold text-[16px] uppercase">
-                <FaDownload /> Download Free Sample
+            <div className="flex flex-wrap gap-4 mt-6">
+              <button className="bg-[#D0A151] text-black px-6 py-2.5 rounded-full flex items-center gap-2 text-[14px] font-semibold uppercase">
+                <FaDownload /> Download Sample
               </button>
-              <button className="border-2 border-[#D0A151] text-[#D0A151] px-8 py-3 rounded-full flex items-center gap-3 font-semibold text-[16px] uppercase">
+              <button className="border-2 border-[#D0A151] text-[#D0A151] px-6 py-2.5 rounded-full flex items-center gap-2 text-[14px] font-semibold uppercase">
                 <FaBook /> Read Online
               </button>
             </div>
@@ -70,7 +61,7 @@ export default function Contact() {
         <img
           src={a73}
           alt="Footer Decorative"
-          className="w-full h-auto object-cover -mt-10"
+          className="w-full h-auto object-cover -mt-8"
         />
       </div>
     </>

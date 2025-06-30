@@ -21,15 +21,17 @@ export default function Struggle() {
     <>
       <div className="w-full bg-black px-4 lg:px-20 py-16 font-[Montserrat]">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h1 className="text-[40px] md:text-[60px] font-bold uppercase text-[#D0A151] inline-block relative pb-2">
-            My Struggles Made me Humble & Grounded
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-[#D0A151]" />
-          </h1>
-          <h2 className="text-[30px] md:text-[40px] font-normal leading-tight text-black mt-6">
-            Some moments which made my life memorable
-          </h2>
-        </div>
+        <div className="text-center mb-10">
+  <h1 className="text-[28px] md:text-[40px] font-bold uppercase text-[#D0A151] inline-block relative pb-2 leading-snug">
+    My Struggles Made me Humble & Grounded
+    <span className="absolute bottom-0 left-0 w-full h-1 bg-[#D0A151]" />
+  </h1>
+  <br />
+  <h2 className="text-[18px] md:text-[24px] font-medium leading-tight text-white mt-4">
+    Some moments which made my life memorable
+  </h2>
+</div>
+
 
         {/* 3 Columns Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,43 +1,10 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import a58 from "../assets/58.png"; // Testimonial author image
-import a59 from "../assets/59.png"; // Top-left icon
-import a60 from "../assets/60.png"; // Bottom-right icon
-import a8 from "../assets/8.png";   // Footer Decorative Image (used at bottom)
+import a58 from "../assets/58.png";
+import a59 from "../assets/59.png";
+import a60 from "../assets/60.png";
+import a8 from "../assets/8.png";
 
 const testimonials = [
-  {
-    name: "Clay Boykin",
-    title: "Author | Thought Partner | Guide",
-    quote:
-      "Lorem1 ipsum Lorem1 ipsumLorem1 ipsumLorem1 ipsumLorem1 ipsum Lorem1 ipsumLorem1 ipsum",
-    img: a58,
-    icons: [a59, a60],
-  },
-  {
-    name: "Clay Boykin",
-    title: "Author | Thought Partner | Guide",
-    quote:
-      "Lorem1 ipsum Lorem1 ipsumLorem1 ipsumLorem1 ipsumLorem1 ipsum Lorem1 ipsumLorem1 ipsum",
-    img: a58,
-    icons: [a59, a60],
-  },
-  {
-    name: "Clay Boykin",
-    title: "Author | Thought Partner | Guide",
-    quote:
-      "Lorem1 ipsum Lorem1 ipsumLorem1 ipsumLorem1 ipsumLorem1 ipsum Lorem1 ipsumLorem1 ipsum",
-    img: a58,
-    icons: [a59, a60],
-  },
-  {
-    name: "Clay Boykin",
-    title: "Author | Thought Partner | Guide",
-    quote:
-      "Lorem1 ipsum Lorem1 ipsumLorem1 ipsumLorem1 ipsumLorem1 ipsum Lorem1 ipsumLorem1 ipsum",
-    img: a58,
-    icons: [a59, a60],
-  },
   {
     name: "Clay Boykin",
     title: "Author | Thought Partner | Guide",
@@ -58,88 +25,76 @@ export default function Testimonials() {
     return () => clearInterval(timer);
   }, []);
 
+  const testimonial = testimonials[index];
+
   return (
     <>
-      <div className="bg-white py-16 px-6 lg:px-20 text-center relative">
-        <h1 className="text-[55px] md:text-[79px] font-bold uppercase mb-6 border-b-[6px] border-[#D0A151] inline-block">
+      <div className="bg-white py-12 px-6 lg:px-16 text-center font-[Montserrat]">
+        <h1 className="text-[40px] font-bold uppercase border-b-4 border-[#D0A151] inline-block mb-4">
           Testimonials
         </h1>
-        <h3 className="text-[28px] md:text-[45px] text-[#525252] capitalize mb-16">
-          Trusted by Leaders Across industries
+        <h3 className="text-[20px] text-[#525252] mb-10">
+          Trusted by Leaders Across Industries
         </h3>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
-          {/* Left Part */}
-          <div className="relative w-[480px] h-[440px] flex items-start justify-center mt-12 lg:mt-24">
+        {/* Testimonial Content */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+          {/* Image Card */}
+          <div className="relative w-[300px] h-[300px]">
             <img
-              src={testimonials[index].img}
-              alt="Profile"
-              className="w-[280px] h-[280px] object-cover rounded-full absolute -top-[140px] z-10"
+              src={testimonial.img}
+              alt="Author"
+              className="w-[150px] h-[150px] object-cover rounded-full mx-auto absolute -top-20 left-1/2 transform -translate-x-1/2"
             />
-            <div className="bg-[#D0A151] pt-[160px] p-12 rounded-lg w-full h-full text-center z-0">
-              <h2 className="text-[24px] font-medium text-black">
-                {testimonials[index].name}
+            <div className="bg-[#D0A151] mt-20 pt-20 p-4 rounded-lg">
+              <h2 className="text-lg font-semibold text-black">
+                {testimonial.name}
               </h2>
-              <p className="text-[18px] font-bold text-white mt-2">
-                {testimonials[index].title}
-              </p>
+              <p className="text-sm font-bold text-white">{testimonial.title}</p>
             </div>
           </div>
 
-          {/* Right Part */}
-          <div className="grid grid-rows-3 max-w-[700px] w-full gap-4">
-            {/* Row 1 - Top Left Icon */}
-            <div className="row-span-1 flex justify-start">
-              <img
-                src={testimonials[index].icons[0]}
-                alt="icon"
-                className="w-[90px] h-[90px] object-contain"
-              />
-            </div>
-
-            {/* Row 2 - Quote */}
-            <div className="row-span-1 flex justify-center items-center text-center">
-              <p className="text-[24px] md:text-[27px] text-black leading-[1.6]">
-                {testimonials[index].quote}
-              </p>
-            </div>
-
-            {/* Row 3 - Bottom Right Icon */}
-            <div className="row-span-1 flex justify-end">
-              <img
-                src={testimonials[index].icons[1]}
-                alt="icon"
-                className="w-[90px] h-[90px] object-contain"
-              />
-            </div>
+          {/* Quote */}
+          <div className="max-w-md text-center">
+            <img
+              src={testimonial.icons[0]}
+              alt="quote start"
+              className="w-[40px] mx-auto mb-2"
+            />
+            <p className="text-[16px] text-black">{testimonial.quote}</p>
+            <img
+              src={testimonial.icons[1]}
+              alt="quote end"
+              className="w-[40px] mx-auto mt-2"
+            />
           </div>
         </div>
 
-        {/* Dots Navigation */}
-        <div className="flex justify-center gap-3 mt-10">
+        {/* Navigation Dots */}
+        <div className="flex justify-center gap-2 mt-6">
           {testimonials.map((_, i) => (
-            <button
+            <div
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full cursor-pointer ${
                 i === index ? "bg-black" : "bg-gray-300"
               }`}
-            ></button>
+            />
           ))}
         </div>
 
-        {/* CTA Button */}
-        <button className="mt-12 px-10 py-3 bg-black text-white text-lg rounded-full">
+        {/* Button */}
+        <button className="mt-8 px-6 py-2 bg-black text-white rounded-full">
           More Testimonials
         </button>
       </div>
 
-      {/* Footer Decorative Image */}
+      {/* Footer */}
       <div className="w-full bg-black">
         <img
           src={a8}
-          alt="Footer Decorative"
-          className="w-full h-auto object-cover -mt-10"
+          alt="footer"
+          className="w-full h-auto object-cover -mt-6"
         />
       </div>
     </>

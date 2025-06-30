@@ -5,38 +5,46 @@ import img22 from "../assets/22.png";
 import img23 from "../assets/23.png";
 import img24 from "../assets/24.png";
 import img25 from "../assets/25.png";
-import footerImg from "../assets/26.png"; // example footer image
+import footerImg from "../assets/26.png";
 
 export default function Connect() {
   const icons = [img19, img20, img21, img22, img23, img24, img25];
 
   return (
     <>
-    <div className="bg-white py-16 px-4 lg:px-20 text-center">
-      <h1 className="text-[#D0A151] text-[60px] font-bold uppercase underline leading-[110px]">
-        Connect with me
-      </h1>
+      <div className="bg-white py-10 px-4 lg:px-16 text-center">
+        {/* Heading */}
+        <h1 className="text-[#D0A151] text-[32px] font-bold uppercase underline leading-tight">
+          Connect with me
+        </h1>
 
-      <div className="mt-12 max-w-[1345px] mx-auto p-10 rounded-[21px] border-2 border-[#CE9D4B]  space-y-8">
-        <p className="text-[28px] font-bold text-[#333]">Connect with Sarthak</p>
+        {/* Card Box */}
+        <div className="mt-8 max-w-[1000px] mx-auto p-6 rounded-[16px] border border-[#CE9D4B] space-y-6">
+          {/* Title */}
+          <p className="text-[20px] font-bold text-[#333]">Connect with Sarthak</p>
 
-        <div className="flex flex-wrap justify-center gap-8">
-          {icons.map((icon, index) => (
-            <div
-              key={index}
-              className="w-[146px] h-[146px] border border-[#D0A151] rounded-[11px] flex items-center justify-center"
-            >
-              <img src={icon} alt={`connect-icon-${index + 1}`} className="max-w-full max-h-full object-contain" />
-            </div>
-          ))}
+          {/* Icons */}
+          <div className="flex flex-wrap justify-center gap-6">
+            {icons.map((icon, index) => (
+              <div
+                key={index}
+                className="w-[100px] h-[100px] border border-[#D0A151] rounded-[10px] flex items-center justify-center"
+              >
+                <img
+                  src={icon}
+                  alt={`connect-icon-${index + 1}`}
+                  className="max-w-full max-h-full object-contain p-2"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      
-    </div>
-    <div>
-        <img src={footerImg} alt="footer" className="mx-auto" />
+      {/* Footer Image */}
+      <div>
+        <img src={footerImg} alt="footer" className="mx-auto w-full h-auto object-cover" />
       </div>
-      </>
+    </>
   );
 }

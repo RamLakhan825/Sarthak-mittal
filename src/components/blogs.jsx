@@ -12,7 +12,7 @@ export default function Blogs() {
       date: "August 21, 2023",
       title: "Stop Ignoring These 7 Inspiring Innovations & How to Do It",
       summary:
-        "Discover the revolutionary innovations that are reshaping industries and learn how to implement them effectively.",
+        "Discover innovations reshaping industries and learn how to implement them effectively.",
     },
     {
       color: "linear-gradient(135deg, #4ADE80 0%, #3B82F6 100%)",
@@ -22,7 +22,7 @@ export default function Blogs() {
       date: "Jan 10, 2024",
       title: "To carry out put into practice management",
       summary:
-        "Practical strategies for implementing management principles that drive results and foster organizational growth.",
+        "Practical strategies to drive results and foster growth.",
     },
     {
       color: "linear-gradient(135deg, #FBBF24 0%, #EF4444 100%)",
@@ -32,102 +32,103 @@ export default function Blogs() {
       date: "Jul 10, 2024",
       title: "B Involves handling over to Customer, Potential",
       summary:
-        "Master the art of customer handoffs and unlock the potential for lasting business relationships.",
+        "Master customer handoffs for lasting relationships.",
     },
   ];
 
   return (
     <>
-      <div className="w-full bg-white py-16 px-6 lg:px-20 font-[Montserrat]">
+      <div className="w-full bg-white py-14 px-4 lg:px-16 font-[Montserrat]">
         {/* Heading */}
         <div className="text-center mb-10">
-          <div className="inline-block bg-[#FF800033] text-[#FDAA56] font-bold text-sm px-6 py-2 rounded-full uppercase tracking-wider mb-4">
+          <div className="inline-block bg-[#FF800033] text-[#FDAA56] font-semibold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide mb-3">
             Latest Insight
           </div>
-          <h2 className="text-[40px] md:text-[60px] font-bold text-[#D0A151] mb-4 underline">
+          <h2 className="text-[28px] md:text-[40px] font-bold text-[#D0A151] mb-3 underline">
             My Blogs & Insights
           </h2>
-          <p className="max-w-[768px] mx-auto text-black text-[18px] leading-[32px]">
-            Thought leadership articles and strategic insights to help you
-            navigate the complexities of modern business.
+          <p className="max-w-[720px] mx-auto text-black text-[15px] leading-[26px]">
+            Thought leadership articles and insights to help navigate modern business challenges.
           </p>
         </div>
 
         {/* Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {blogData.map((blog, index) => (
             <div
               key={index}
-              className="border-[3px] border-[#D0A151] bg-black rounded-xl overflow-hidden"
+              className="border-[2px] border-[#D0A151] bg-black rounded-xl overflow-hidden"
             >
               <div
-                className="h-[256px] p-4 flex items-start justify-between"
+                className="h-[200px] p-4 flex items-start justify-between"
                 style={{ background: blog.color }}
               >
-                <button className="bg-white text-black text-sm px-3 py-1 rounded-full font-semibold">
+                <button className="bg-white text-black text-xs px-3 py-1 rounded-full font-semibold">
                   {blog.category}
                 </button>
-                <button className="bg-black/60 text-white text-sm px-3 py-1 rounded-full font-semibold">
+                <button className="bg-black/60 text-white text-xs px-3 py-1 rounded-full font-semibold">
                   {blog.readTime}
                 </button>
               </div>
 
-              <div className="flex items-center gap-4 text-gray-400 text-sm px-6 mt-4">
-                <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4 text-gray-400 text-xs px-5 mt-4">
+                <div className="flex items-center gap-1">
                   <FaUser />
                   {blog.author}
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   <FaCalendarAlt />
                   {blog.date}
                 </div>
               </div>
 
-              <div className="text-[#FDAA56] font-bold text-[20px] px-6 mt-4 leading-tight">
+              <div className="text-[#FDAA56] font-semibold text-[16px] px-5 mt-3 leading-tight">
                 {blog.title}
               </div>
-              <p className="text-white text-[16px] px-6 mt-4 leading-[26px]">
+              <p className="text-white text-[14px] px-5 mt-3 leading-[22px]">
                 {blog.summary}
               </p>
 
-              <div className="text-[#FDAA56] font-bold flex items-center gap-2 px-6 py-4 mt-2 cursor-pointer hover:underline">
+              <div className="text-[#FDAA56] font-semibold flex items-center gap-2 px-5 py-4 mt-1 cursor-pointer hover:underline text-sm">
                 Read More <FaArrowRight />
               </div>
             </div>
           ))}
         </div>
-
-        {/* CTA Button Only (keep inside padding) */}
-        
       </div>
-      <div className="w-full mt-12 flex justify-center">
-  <button className="text-[#FDAA56] border-2 border-[#FDAA56] rounded-full px-8 py-4 text-[16px] font-bold uppercase">
-    Visit My Blog and Learn More About Entrepreneurship
-  </button>
-</div>
 
+      {/* CTA Button */}
+      <div className="w-full mt-10 flex justify-center px-4">
+        <button className="text-[#FDAA56] border-2 border-[#FDAA56] rounded-full px-6 py-3 text-sm font-bold uppercase">
+          Visit My Blog and Learn More About Entrepreneurship
+        </button>
+      </div>
 
-      {/* Author Footer Card outside padding to avoid right space */}
-      <div className="w-full flex justify-end">
-        <div className="bg-black flex items-center gap-6 p-4 pr-0 rounded-l-xl w-[275px] mb-[40px]">
+      {/* Author Footer Card */}
+      <div className="w-full flex justify-end px-4">
+        <div className="bg-black flex items-center gap-4 p-3 pr-0 rounded-l-xl w-[260px] mt-8 mb-10">
           <img
             src={a76}
             alt="Sarthak Mittal"
-            className="w-[75px] h-[75px] rounded-full"
+            className="w-[60px] h-[60px] rounded-full"
           />
           <div>
-            <h1 className="text-[#FDAA56] font-bold text-[18px]">Sarthak Mittal   </h1>
-            <h2 className="text-white text-sm">Author</h2>
+            <h1 className="text-[#FDAA56] font-bold text-[16px]">
+              Sarthak Mittal
+            </h1>
+            <h2 className="text-white text-xs">Author</h2>
           </div>
         </div>
       </div>
+
+      {/* Footer Decorative */}
       <div className="w-full bg-black">
-                  <img
-                    src={a8}
-                    alt="Footer Decorative"
-                    className="w-full h-auto object-cover -mt-10"
-                  />
-                </div>
+        <img
+          src={a8}
+          alt="Footer Decorative"
+          className="w-full h-auto object-cover -mt-8"
+        />
+      </div>
     </>
   );
 }

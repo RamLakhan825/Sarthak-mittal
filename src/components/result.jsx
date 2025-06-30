@@ -11,40 +11,41 @@ export default function Result() {
     <>
       {/* Background Section with Glass Effect */}
       <div
-        className="w-full h-[1409px] bg-cover bg-center relative"
+        className="w-full h-screen bg-cover bg-center relative"
         style={{ backgroundImage: `url(${a12})` }}
       >
         {/* Glass Layer */}
-        <div className="w-full h-full bg-black/80 backdrop-blur-md px-[132px] pt-[155px]">
+        <div className="w-full h-full bg-black/80 backdrop-blur-md px-6 lg:px-[100px] pt-[80px]">
           {/* Title */}
           <h1
-            className="text-[60px] leading-[110.7px] font-bold font-montserrat uppercase text-left underline decoration-6 underline-offset-[10px] bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(89.74deg, #D0A151 8.4%, #DCB56C 51.24%, #E6C584 60.57%, #DDB56D 67.77%, #CE9D4B 98.28%)",
-            }}
-          >
-            Result of My Consistency & Pain
-          </h1>
+  className="inline-block text-[36px] lg:text-[48px] leading-tight font-bold font-montserrat uppercase text-left border-b-4 border-[#D0A151] mb-16 bg-clip-text text-transparent"
+  style={{
+    backgroundImage:
+      "linear-gradient(89.74deg, #D0A151 8.4%, #DCB56C 51.24%, #E6C584 60.57%, #DDB56D 67.77%, #CE9D4B 98.28%)",
+  }}
+>
+  Result of My Consistency & Pain
+</h1>
+
 
           {/* Subtitle */}
-          <h3 className="text-white text-[40px] font-normal font-montserrat mt-[20px] text-left">
+          <h3 className="text-white text-[20px] lg:text-[20px] font-normal font-montserrat mt-[12px] text-left">
             Businesses & Industries Acquired by Mittal Alliance
           </h3>
 
           {/* Circle Logos Row */}
-          <div className="flex justify-center items-center gap-[20px] mt-[100px] max-w-[1306px] mx-auto flex-wrap lg:flex-nowrap">
+          <div className="flex justify-center items-center gap-[16px] mt-[40px] max-w-[1306px] mx-auto flex-wrap lg:flex-nowrap">
             {[a14, a15, a16, a17].map((logo, idx) => (
               <div
                 key={idx}
-                className="relative w-[326px] h-[326px] rounded-[38px] overflow-hidden"
+                className="relative w-[200px] h-[200px] rounded-[24px] overflow-hidden"
               >
                 <img
                   src={a13}
                   alt={`circle-${idx + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-[75px] left-[75px] w-[175px] h-[175px] rounded-[18px] overflow-hidden">
+                <div className="absolute top-[45px] left-[45px] w-[110px] h-[110px] rounded-[12px] overflow-hidden">
                   <img
                     src={logo}
                     alt={`logo-${idx + 1}`}
@@ -56,14 +57,14 @@ export default function Result() {
           </div>
 
           {/* Footer Text */}
-          <p className="text-white font-bold text-[40px] text-center mt-[120px]">
+          <p className="text-white font-bold text-[20px] lg:text-[28px] text-center mt-[40px]">
             A Multinational “MITTAL” Brand Expanding by 2030
           </p>
         </div>
       </div>
 
       {/* Decorative Footer Image */}
-      <div className="w-full bg-black -mt-[40px]">
+      <div className="w-full bg-black -mt-[20px]">
         <img
           src={a18}
           alt="Footer Decorative"

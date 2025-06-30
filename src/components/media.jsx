@@ -68,13 +68,14 @@ export default function Media() {
       </div>
 
       {/* Full-width footer image */}
-      <div className="w-full">
-        <img
-          src={a57}
-          alt="Footer Decorative"
-          className="w-full h-auto object-cover"
-        />
-      </div>
+      <div className="w-full overflow-hidden">
+  <img
+    src={a57}
+    alt="Footer Decorative"
+    className="w-full max-h-[800px] object-cover"
+  />
+</div>
+
     </>
   );
 }
