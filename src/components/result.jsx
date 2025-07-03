@@ -11,14 +11,14 @@ export default function Result() {
     <>
       {/* Background Section with Glass Effect */}
       <div
-        className="w-full h-screen bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${a12})` }}
-      >
+  className="w-full h-[1400px] sm:h-[1200px] md:h-[1000px] lg:h-screen bg-cover bg-center relative"
+  style={{ backgroundImage: `url(${a12})` }}
+>
         {/* Glass Layer */}
         <div className="w-full h-full bg-black/80 backdrop-blur-md px-6 lg:px-[100px] pt-[80px]">
           {/* Title */}
           <h1
-  className="inline-block text-[36px] lg:text-[48px] leading-tight font-bold font-montserrat uppercase text-left border-b-4 border-[#D0A151] mb-16 bg-clip-text text-transparent"
+  className="inline-block text-[36px] lg:text-[48px] leading-tight font-bold font-montserrat uppercase text-left lg:border-b-4 lg:border-[#D0A151] mb-16 bg-clip-text text-transparent"
   style={{
     backgroundImage:
       "linear-gradient(89.74deg, #D0A151 8.4%, #DCB56C 51.24%, #E6C584 60.57%, #DDB56D 67.77%, #CE9D4B 98.28%)",

@@ -5,25 +5,20 @@ export default function About() {
   return (
     <>
       <div className="w-full bg-white font-montserrat px-4 md:px-10 py-10 relative overflow-hidden">
-        {/* Orange Decorative Box - Visible on large screens */}
-        <div className="hidden lg:block absolute top-[50px] left-[150px] w-[120px] h-[300px] bg-[#E6C584] z-0 rounded-xl" />
+        {/* Orange Decorative Box - now also shown in mobile */}
+        <div className="absolute top-[50px] left-[30px] lg:left-[150px] w-[100px] lg:w-[120px] h-[200px] lg:h-[300px] bg-[#E6C584] z-0 rounded-xl" />
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-end max-w-[1600px] mx-auto">
-          {/* Left Side: Heading + Paragraph */}
-          <div className="w-full lg:w-[65%]">
+        {/* Main Layout */}
+        <div className="relative z-10 flex flex-row items-start max-w-[1600px] mx-auto gap-4 lg:gap-6 lg:ml-36">
+          {/* Left Side: Heading + Bullet Block */}
+          <div className="w-[60%] sm:w-[65%] md:w-[70%] lg:w-full">
             {/* Heading */}
-            <h2
-              className="text-[#D0A151] uppercase font-bold text-[36px] md:text-[64px] leading-tight mb-4"
-              style={{ marginLeft: "155px", marginTop: "40px" }}
-            >
+            <h2 className="text-[#D0A151] uppercase font-bold text-[20px] sm:text-[24px] md:text-[30px] lg:text-[56px] leading-tight mb-4 text-center lg:text-left lg:ml-[120px] lg:mt-[40px] whitespace-nowrap">
               About Sarthak Mittal
             </h2>
 
-            {/* Bordered Box with Bullet Points */}
-            <div
-              className="min-h-[750px] border-2 border-black rounded-[20px] p-6 md:p-8 w-full"
-              style={{ marginLeft: "190px", marginTop: "45px" }}
-            >
+            {/* Bordered Bullet Box */}
+            <div className="border-2 border-black rounded-[20px] p-4 md:p-6 lg:p-6 mt-2 w-full lg:ml-[60px]">
               {[
                 `<strong class="font-bold">FOUNDER & CEO</strong> of Mittal Alliance Industries Private Limited (India) and <strong>Mittal Brandtech Inc. (Colorado, USA)</strong> — two successful enterprises partnering with leading brands and <strong>2000+ industrialists</strong> worldwide.`,
                 `Recognized as one of the <strong>most trusted branding experts</strong> across APAC, USA, and Europe, with multiple associated ventures and high-impact client portfolios.`,
@@ -35,7 +30,7 @@ export default function About() {
               ].map((text, idx) => (
                 <p
                   key={idx}
-                  className="relative pl-4 mb-4 text-[15px] md:text-[17px] text-black font-medium uppercase text-justify before:content-['•'] before:absolute before:left-0 before:text-black before:font-bold"
+                  className="relative pl-4 mb-4 text-[12px] sm:text-[14px] md:text-[15px] lg:text-[15px] text-black font-medium uppercase text-justify before:content-['•'] before:absolute before:left-0 before:text-black before:font-bold"
                   dangerouslySetInnerHTML={{ __html: text }}
                 />
               ))}
@@ -43,28 +38,24 @@ export default function About() {
           </div>
 
           {/* Right Side: Image */}
-          <img
-  src={a7}
-  alt="About Visual"
-  className="w-[400px] h-[620px] object-contain rounded-xl 
-             block relative top-[100px] left-[60px] mx-auto lg:ml-auto lg:mr-0"
-/>
-
-
-
+          <div className="w-[40%] sm:w-[100%] md:w-[100%] flex justify-center items-end mt-2 lg:mt-[100px] self-stretch lg:ml-7">
+  <img
+    src={a7}
+    alt="About Visual"
+    className="w-full sm:w-[90%] h-auto object-contain rounded-xl max-h-[700px] sm:h-[12000px] sm:ml-4"
+  />
+</div>
         </div>
       </div>
 
       {/* Footer Image */}
       <div className="w-full bg-black">
-  <img
-    src={a8}
-    alt="Footer Decorative"
-    className="w-full h-auto object-cover -mt-19" // -mt-10 is roughly -40px
-  />
-</div>
-
-     
+        <img
+          src={a8}
+          alt="Footer Decorative"
+          className="w-full h-auto object-cover"
+        />
+      </div>
     </>
   );
 }

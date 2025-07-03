@@ -41,7 +41,7 @@ export default function Success() {
       </div>
 
       {/* Second Row (Rotated Style) */}
-      <div className="flex justify-center gap-[0px] flex-wrap lg:flex-nowrap w-full max-w-[1440px] mx-auto px-6">
+      <div className="flex justify-center gap-[10px] flex-wrap lg:flex-nowrap w-full max-w-[1440px] mx-auto px-6">
         {[...Array(5)].map((_, index) => (
           <div key={index} className="relative w-[268px] h-[460px] shrink-0 rotate-180">
             {/* Background Arrow Border - rotated */}

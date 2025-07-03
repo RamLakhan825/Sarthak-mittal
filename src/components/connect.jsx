@@ -24,11 +24,13 @@ export default function Connect() {
           <p className="text-[20px] font-bold text-[#333]">Connect with Sarthak</p>
 
           {/* Icons */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="grid grid-cols-3 gap-6 sm:flex sm:flex-wrap sm:justify-center">
             {icons.map((icon, index) => (
               <div
                 key={index}
-                className="w-[100px] h-[100px] border border-[#D0A151] rounded-[10px] flex items-center justify-center"
+                className={`w-[100px] h-[100px] border border-[#D0A151] rounded-[10px] flex items-center justify-center ${
+                  index === icons.length - 1 ? "col-span-3 mx-auto" : ""
+                }`}
               >
                 <img
                   src={icon}
@@ -43,7 +45,11 @@ export default function Connect() {
 
       {/* Footer Image */}
       <div>
-        <img src={footerImg} alt="footer" className="mx-auto w-full h-auto object-cover" />
+        <img
+          src={footerImg}
+          alt="footer"
+          className="mx-auto w-full h-auto object-cover"
+        />
       </div>
     </>
   );

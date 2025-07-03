@@ -29,44 +29,54 @@ export default function Testimonials() {
 
   return (
     <>
-      <div className="bg-white py-12 px-6 lg:px-16 text-center font-[Montserrat]">
-        <h1 className="text-[40px] font-bold uppercase border-b-4 border-[#D0A151] inline-block mb-4">
+      <div className="bg-white py-12 px-4 sm:px-6 lg:px-16 text-center font-[Montserrat]">
+        {/* Heading */}
+        <h1 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold uppercase border-b-4 border-[#D0A151] inline-block mb-4">
           Testimonials
         </h1>
-        <h3 className="text-[20px] text-[#525252] mb-10">
+        <h3 className="text-[16px] sm:text-[18px] lg:text-[20px] text-[#525252] mb-10">
           Trusted by Leaders Across Industries
         </h3>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 relative">
           {/* Image Card */}
-          <div className="relative w-[300px] h-[300px]">
+          <div className="relative w-[260px] sm:w-[280px] lg:w-[300px]">
+            <div className="bg-[#D0A151] pt-20 pb-4 px-4 rounded-lg relative z-10">
+              <h2 className="text-md sm:text-lg font-semibold text-black">
+                {testimonial.name}
+              </h2>
+              <p className="text-sm font-bold text-white">
+                {testimonial.title}
+              </p>
+            </div>
+            {/* Overlapping Image */}
             <img
               src={testimonial.img}
               alt="Author"
-              className="w-[150px] h-[150px] object-cover rounded-full mx-auto absolute -top-20 left-1/2 transform -translate-x-1/2"
+              className="w-[120px] sm:w-[130px] lg:w-[150px] h-[120px] sm:h-[130px] lg:h-[150px] object-cover rounded-full mx-auto absolute -top-[60px] left-1/2 transform -translate-x-1/2 z-20"
             />
-            <div className="bg-[#D0A151] mt-20 pt-20 p-4 rounded-lg">
-              <h2 className="text-lg font-semibold text-black">
-                {testimonial.name}
-              </h2>
-              <p className="text-sm font-bold text-white">{testimonial.title}</p>
-            </div>
           </div>
 
           {/* Quote */}
-          <div className="max-w-md text-center">
-            <img
-              src={testimonial.icons[0]}
-              alt="quote start"
-              className="w-[40px] mx-auto mb-2"
-            />
-            <p className="text-[16px] text-black">{testimonial.quote}</p>
-            <img
-              src={testimonial.icons[1]}
-              alt="quote end"
-              className="w-[40px] mx-auto mt-2"
-            />
+          <div className="w-full max-w-[500px] px-4">
+            <div className="bg-gray-100 p-4 rounded-lg mx-auto w-[75%]">
+              <div className="flex justify-between items-start mb-2">
+                <img
+                  src={testimonial.icons[0]}
+                  alt="quote start"
+                  className="w-[24px] sm:w-[30px] object-contain"
+                />
+                <img
+                  src={testimonial.icons[1]}
+                  alt="quote end"
+                  className="w-[24px] sm:w-[30px] object-contain"
+                />
+              </div>
+              <p className="text-[14px] sm:text-[16px] text-black text-justify">
+                {testimonial.quote}
+              </p>
+            </div>
           </div>
         </div>
 
@@ -84,7 +94,7 @@ export default function Testimonials() {
         </div>
 
         {/* Button */}
-        <button className="mt-8 px-6 py-2 bg-black text-white rounded-full">
+        <button className="mt-8 px-6 py-2 bg-black text-white rounded-full text-sm sm:text-base">
           More Testimonials
         </button>
       </div>

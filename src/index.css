@@ -5,3 +5,13 @@
     0% 20%, 50% 0%, 100% 20%, 100% 100%, 0% 100%
   );
 }
+
+/* In global.css or Tailwind config */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

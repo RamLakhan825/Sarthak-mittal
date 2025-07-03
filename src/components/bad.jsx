@@ -20,18 +20,28 @@ export default function Bad() {
 
         {/* Border container */}
         <div className="border-2 border-[#D0A151] p-4 md:p-6 flex flex-col items-center gap-8">
-          {/* Top images: B, A, D logos */}
-          <div className="flex flex-wrap justify-center gap-6">
-            <img src={a33} alt="B" className="w-[120px] h-[120px] lg:w-[160px] lg:h-[160px]" />
-            <img src={a34} alt="A" className="w-[120px] h-[120px] lg:w-[160px] lg:h-[160px]" />
-            <img src={a35} alt="D" className="w-[120px] h-[120px] lg:w-[160px] lg:h-[160px]" />
+          {/* --- MOBILE VERSION (a33,a36,a34,a37,a35,a38) --- */}
+          <div className="flex flex-col gap-6 lg:hidden">
+            <img src={a33} alt="B" className="w-[120px] h-[120px] mx-auto" />
+            <img src={a36} alt="B Explain" className="w-full object-cover" />
+            <img src={a34} alt="A" className="w-[120px] h-[120px] mx-auto" />
+            <img src={a37} alt="A Explain" className="w-full object-cover" />
+            <img src={a35} alt="D" className="w-[120px] h-[120px] mx-auto" />
+            <img src={a38} alt="D Explain" className="w-full object-cover" />
           </div>
 
-          {/* Explanation cards side-by-side */}
-          <div className="flex flex-col lg:flex-row justify-center gap-4 w-full">
-            <img src={a36} alt="B Explain" className="w-full lg:w-1/3 object-cover" />
-            <img src={a37} alt="A Explain" className="w-full lg:w-1/3 object-cover" />
-            <img src={a38} alt="D Explain" className="w-full lg:w-1/3 object-cover" />
+          {/* --- DESKTOP VERSION (side-by-side layout) --- */}
+          <div className="hidden lg:flex flex-col items-center gap-8 w-full">
+            <div className="flex justify-center gap-6">
+              <img src={a33} alt="B" className="w-[160px] h-[160px]" />
+              <img src={a34} alt="A" className="w-[160px] h-[160px]" />
+              <img src={a35} alt="D" className="w-[160px] h-[160px]" />
+            </div>
+            <div className="flex justify-center gap-4 w-full">
+              <img src={a36} alt="B Explain" className="w-1/3 object-cover" />
+              <img src={a37} alt="A Explain" className="w-1/3 object-cover" />
+              <img src={a38} alt="D Explain" className="w-1/3 object-cover" />
+            </div>
           </div>
         </div>
 
