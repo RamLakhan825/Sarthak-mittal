@@ -44,7 +44,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex flex-row flex-wrap lg:flex-nowrap gap-4 mt-6">
               <button className="bg-[#D0A151] text-black px-6 py-2.5 rounded-full flex items-center gap-2 text-[14px] font-semibold uppercase">
                 <FaDownload /> Download Sample
               </button>

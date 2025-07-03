@@ -38,7 +38,7 @@ export default function About() {
           </div>
 
           {/* Right Side: Image */}
-          <div className="w-[40%] sm:w-[100%] md:w-[100%] flex justify-center items-end mt-2 lg:mt-[100px] self-stretch lg:ml-7">
+          <div className="w-[40%] sm:w-[100%] md:w-[100%] flex justify-center items-end mt-2 lg:mt-[100px] self-stretch lg:ml-[-4]">
   <img
     src={a7}
     alt="About Visual"

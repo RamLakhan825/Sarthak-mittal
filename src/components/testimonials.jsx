@@ -42,7 +42,7 @@ export default function Testimonials() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 relative">
           {/* Image Card */}
           <div className="relative w-[260px] sm:w-[280px] lg:w-[300px]">
-            <div className="bg-[#D0A151] pt-20 pb-4 px-4 rounded-lg relative z-10">
+            <div className="bg-[#D0A151] pt-28 pb-4 px-4 rounded-lg relative z-10">
               <h2 className="text-md sm:text-lg font-semibold text-black">
                 {testimonial.name}
               </h2>
@@ -54,28 +54,32 @@ export default function Testimonials() {
             <img
               src={testimonial.img}
               alt="Author"
-              className="w-[120px] sm:w-[130px] lg:w-[150px] h-[120px] sm:h-[130px] lg:h-[150px] object-cover rounded-full mx-auto absolute -top-[60px] left-1/2 transform -translate-x-1/2 z-20"
+              className="w-[120px] sm:w-[130px] lg:w-[150px] h-[120px] sm:h-[130px] lg:h-[150px] object-cover rounded-full mx-auto absolute -top-[30px] sm:-top-[50px] lg:-top-[60px] left-1/2 transform -translate-x-1/2 z-20"
             />
           </div>
 
-          {/* Quote */}
+          {/* Quote Box */}
           <div className="w-full max-w-[500px] px-4">
-            <div className="bg-gray-100 p-4 rounded-lg mx-auto w-[75%]">
-              <div className="flex justify-between items-start mb-2">
-                <img
-                  src={testimonial.icons[0]}
-                  alt="quote start"
-                  className="w-[24px] sm:w-[30px] object-contain"
-                />
-                <img
-                  src={testimonial.icons[1]}
-                  alt="quote end"
-                  className="w-[24px] sm:w-[30px] object-contain"
-                />
-              </div>
+            <div className="bg-gray-100 pt-12 p-4 rounded-lg mx-auto w-[75%] relative">
+              {/* Top Left Quote */}
+              <img
+                src={testimonial.icons[0]}
+                alt="quote start"
+                className="w-[24px] sm:w-[30px] object-contain absolute top-4 left-4"
+              />
+
+              {/* Quote Text */}
               <p className="text-[14px] sm:text-[16px] text-black text-justify">
                 {testimonial.quote}
               </p>
+              <br />
+
+              {/* Bottom Right Quote */}
+              <img
+                src={testimonial.icons[1]}
+                alt="quote end"
+                className="w-[24px] sm:w-[30px] object-contain absolute bottom-4 right-4"
+              />
             </div>
           </div>
         </div>

@@ -5,6 +5,13 @@ import { FaRegEnvelope } from "react-icons/fa"; // Message icon
 export default function Footer() {
   return (
     <div className="w-full bg-black relative px-6 md:px-12 py-16 text-white font-sans overflow-hidden">
+      {/* Message Icon at Top Right */}
+      <div className="absolute top-6 right-6 z-10">
+        <div className="w-12 h-12 rounded-full bg-[#D0A151] flex items-center justify-center">
+          <FaRegEnvelope className="text-black text-xl" />
+        </div>
+      </div>
+
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row flex-wrap gap-12 justify-between">
         {/* Company Info */}
@@ -23,7 +30,7 @@ export default function Footer() {
         </div>
 
         {/* Pages */}
-        <div className="space-y-3">
+        <div className="space-y-3 min-w-[120px]">
           <h1 className="text-xl font-bold text-white">Pages</h1>
           <p>Home</p>
           <p>Services</p>
@@ -34,7 +41,7 @@ export default function Footer() {
         </div>
 
         {/* Company */}
-        <div className="space-y-3">
+        <div className="space-y-3 min-w-[120px]">
           <h1 className="text-xl font-bold text-white">Company</h1>
           <p>Careers</p>
           <p>Support</p>
@@ -42,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Get In Touch */}
-        <div className="space-y-3">
+        <div className="space-y-3 min-w-[160px]">
           <h1 className="text-xl font-bold text-white">Get In Touch</h1>
           <p>Head Office</p>
           <p>Vijay Nagar Part II,</p>
@@ -51,20 +58,13 @@ export default function Footer() {
           <h1 className="mt-4 font-bold">Sub Office</h1>
           <p>Indore, INDIA</p>
         </div>
-
-        {/* Message Icon */}
-        <div className="flex items-start justify-start">
-          <div className="w-12 h-12 rounded-full bg-[#D0A151] flex items-center justify-center">
-            <FaRegEnvelope className="text-black text-xl" />
-          </div>
-        </div>
       </div>
 
       {/* Divider */}
       <div className="h-[1px] w-full bg-[#D0A151] my-12" />
 
       {/* Bottom Section */}
-      <div className="flex flex-wrap justify-center md:justify-between items-center text-sm text-white">
+      <div className="text-sm text-white">
         <p className="flex items-center gap-2">
           <span>Copyright ©</span>
           <span className="text-[#D0A151] font-semibold">Sarthak Mittal</span>
