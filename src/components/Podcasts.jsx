@@ -15,31 +15,35 @@ export default function Podcasts() {
         {/* Main Layout */}
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           {/* Left - Image Section */}
-          <div className="relative w-full lg:w-[50%] flex justify-center">
-            <div className="absolute top-6 right-3 bottom-10 w-[90%] h-full bg-[#D0A15169] z-0 rounded-lg"></div>
+          <div className="relative w-full lg:w-[45%] flex justify-center mb-12">
+  {/* Orange shadow behind */}
+  <div className="absolute right-[90px] bottom-[-30px] w-[75%] lg:w-[90%] max-w-[400px] h-[100%] bg-[#D0A15169] z-0 rounded-lg" />
+  
+  {/* Main Image */}
+  <img
+    src={a74}
+    alt="Podcast Host"
+    className="relative z-10 border-[4px] border-[#D0A151] w-[75%] lg:w-[60%] max-w-[400px] h-auto object-cover rounded-lg"
+  />
+  
+</div>
 
-            <img
-              src={a74}
-              alt="Podcast Host"
-              className="relative z-10 border-[4px] border-[#D0A151] w-[90%] max-w-[600px] h-auto object-cover"
-            />
-          </div>
 
           {/* Right - Text & Buttons */}
           <div className="w-full lg:w-[50%] flex flex-col justify-center gap-4">
-            <h2 className="text-[#15152A] text-[24px] md:text-[32px] font-semibold leading-snug">
+            <h2 className="text-[#15152A] text-[30px] md:text-[70px] font-semibold leading-snug">
               A podcast for makers and entrepreneurs
             </h2>
-            <p className="text-[#6D6D6D] text-[16px] md:text-[17px] leading-[1.6]">
+            <p className="text-[#6D6D6D] text-[20px] md:text-[17px] leading-[1.6]">
               Welcome to our podcast series dedicated to makers and entrepreneurs. Join industry leaders and innovators as they share insights, stories, and practical advice to inspire your journey. Whether you're building a startup or launching your next big idea, these conversations offer valuable guidance and motivation to help you succeed.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mt-2">
-              <button className="bg-[#D0A151] text-white px-6 py-3 rounded-full text-[16px] md:text-[18px] font-semibold uppercase">
+              <button className="bg-[#D0A151] text-white px-6 py-3 rounded-full text-[20px] md:text-[18px] font-semibold uppercase">
                 Watch Podcast
               </button>
-              <button className="border-[2px] border-[#D0A151] text-[#D0A151] px-6 py-3 rounded-full text-[16px] md:text-[18px] font-semibold uppercase">
+              <button className="border-[2px] border-[#D0A151] text-[#D0A151] px-6 py-3 rounded-full text-[20px] md:text-[18px] font-semibold uppercase">
                 Join for a podcast
               </button>
             </div>

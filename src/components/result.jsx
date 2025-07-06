@@ -29,10 +29,10 @@ export default function Result() {
 
 
           {/* Subtitle */}
-          <h3 className="text-white text-[20px] lg:text-[20px] font-normal font-montserrat mt-[12px] text-left">
+          <h3 className="text-white text-[20px] lg:text-[20px] font-normal font-montserrat mt-[-50px] text-left">
             Businesses & Industries Acquired by Mittal Alliance
           </h3>
-
+<br /><br />
           {/* Circle Logos Row */}
           <div className="flex justify-center items-center gap-[16px] mt-[40px] max-w-[1306px] mx-auto flex-wrap lg:flex-nowrap">
             {[a14, a15, a16, a17].map((logo, idx) => (
@@ -57,9 +57,10 @@ export default function Result() {
           </div>
 
           {/* Footer Text */}
-          <p className="text-white font-bold text-[20px] lg:text-[28px] text-center mt-[40px]">
-            A Multinational “MITTAL” Brand Expanding by 2030
-          </p>
+          <p className="text-white font-bold text-[20px] lg:text-[28px] text-center mt-[40px] underline decoration-white">
+  A Multinational “MITTAL” Brand Expanding by 2030
+</p>
+
         </div>
       </div>
 

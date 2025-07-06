@@ -3,7 +3,7 @@ import a8 from "../assets/8.png"; // Footer decorative image
 
 export default function About() {
   return (
-    <>
+    <div>
       <div className="w-full bg-white font-montserrat px-4 md:px-10 py-10 relative overflow-hidden">
         {/* Orange Decorative Box - now also shown in mobile */}
         <div className="absolute top-[50px] left-[30px] lg:left-[150px] w-[100px] lg:w-[120px] h-[200px] lg:h-[300px] bg-[#E6C584] z-0 rounded-xl" />
@@ -13,12 +13,12 @@ export default function About() {
           {/* Left Side: Heading + Bullet Block */}
           <div className="w-[60%] sm:w-[65%] md:w-[70%] lg:w-full">
             {/* Heading */}
-            <h2 className="text-[#D0A151] uppercase font-bold text-[20px] sm:text-[24px] md:text-[30px] lg:text-[56px] leading-tight mb-4 text-center lg:text-left lg:ml-[120px] lg:mt-[40px] whitespace-nowrap">
+            <h2 className="text-[#D0A151] uppercase font-bold text-[20px] sm:text-[24px] md:text-[30px] lg:text-[56px] leading-tight mb-4 text-center lg:text-left lg:ml-[20px] lg:mt-[40px] whitespace-nowrap">
               About Sarthak Mittal
             </h2>
 
             {/* Bordered Bullet Box */}
-            <div className="border-2 border-black rounded-[20px] p-4 md:p-6 lg:p-6 mt-2 w-full lg:ml-[60px]">
+            <div className="border-2 border-black rounded-[20px] p-4 md:p-6 lg:p-6 mt-2 w-full lg:w-[calc(100%+60px)] lg:ml-[60px]">
               {[
                 `<strong class="font-bold">FOUNDER & CEO</strong> of Mittal Alliance Industries Private Limited (India) and <strong>Mittal Brandtech Inc. (Colorado, USA)</strong> — two successful enterprises partnering with leading brands and <strong>2000+ industrialists</strong> worldwide.`,
                 `Recognized as one of the <strong>most trusted branding experts</strong> across APAC, USA, and Europe, with multiple associated ventures and high-impact client portfolios.`,
@@ -38,7 +38,7 @@ export default function About() {
           </div>
 
           {/* Right Side: Image */}
-          <div className="w-[40%] sm:w-[100%] md:w-[100%] flex justify-center items-end mt-2 lg:mt-[100px] self-stretch lg:ml-[-4]">
+          <div className="w-[40%] sm:w-[100%] md:w-[100%] flex justify-center items-end mt-2 lg:mt-[100px] self-stretch lg:ml-[60]">
   <img
     src={a7}
     alt="About Visual"
@@ -56,6 +56,6 @@ export default function About() {
           className="w-full h-auto object-cover"
         />
       </div>
-    </>
+    </div>
   );
 }

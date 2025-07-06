@@ -5,14 +5,14 @@ import { FaDownload, FaBook } from "react-icons/fa";
 export default function Contact() {
   return (
     <>
-      <div className="bg-black text-white w-full px-4 lg:px-12 py-12 font-[Montserrat]">
+      <div className="bg-black text-white w-full px-4 lg:px-12 pt-12 pb-[80px] font-[Montserrat]">
         <div className="flex flex-col lg:flex-row items-start gap-12">
           {/* Left - Image */}
           <div className="w-full lg:w-[40%] flex justify-center">
             <img
               src={a75}
               alt="Contact"
-              className="border-[4px] border-[#D0A151] shadow-inner shadow-black w-full max-w-[480px] object-cover"
+              className="border-[4px] border-[#D0A151] shadow-inner shadow-black w-full max-w-[350px] object-cover"
             />
           </div>
 

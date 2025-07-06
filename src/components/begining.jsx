@@ -30,8 +30,8 @@ export default function Connect() {
           </p>
         </div>
         <div className="lg:w-1/3 flex gap-4 justify-start ml-3">
-          <img src={img27} alt="Founder 1" className="w-[160px] h-[200px] border-[3px] border-[#D0A151] object-cover rounded" />
-          <img src={img28} alt="Founder 2" className="w-[160px] h-[200px] border-[3px] border-[#D0A151] object-cover rounded" />
+          <img src={img27} alt="Founder 1" className="w-[180px] h-[220px] border-[3px] border-[#D0A151] object-cover rounded" />
+          <img src={img28} alt="Founder 2" className="w-[180px] h-[220px] border-[3px] border-[#D0A151] object-cover rounded" />
         </div>
       </div>
 
@@ -64,10 +64,10 @@ export default function Connect() {
 
       {/* Rebellion Years */}
       <div className="flex flex-col lg:flex-row gap-6 items-start">
-        <img src={img29} alt="The Rebellion Years" className="w-full lg:w-[400px] border-[4px] border-[#CE9D4B] object-cover" />
+        <img src={img29} alt="The Rebellion Years" className="w-full lg:w-[350px] border-[4px] border-[#CE9D4B] object-cover" />
         <div className="lg:w-2/3 space-y-4">
           <h3 className="text-[#CE9D4B] text-[28px] font-bold uppercase text-center">The Rebellion Years</h3>
-          <p className="text-[18px] leading-[30px] text-justify">
+          <p className="text-[20px] leading-[30px] text-justify ml-[60px]">
             Like many Indian kids, I was pushed into the IIT race. I enrolled in a <strong>dummy school</strong> and <strong>FIITJEE
             coaching</strong>, but deep down, I knew I was meant for something else.<br /><br />
             I started with <strong>YouTube</strong>, then <strong>e-commerce</strong>, selling my <strong>mother’s handmade crafts</strong>.
@@ -84,7 +84,7 @@ export default function Connect() {
       <div className="flex flex-col lg:flex-row gap-6 items-start">
         <div className="lg:w-2/3 space-y-4">
           <h3 className="text-[#CE9D4B] text-[28px] uppercase font-semibold text-center">The Rise of an Entrepreneur</h3>
-          <p className="text-[18px] leading-[30px] text-justify">
+          <p className="text-[20px] leading-[30px] text-justify">
             In <strong>2022</strong>, I joined <strong>NMIMS Indore</strong> for a <strong>B.Tech + MBA</strong>. But my soul belonged to <strong>entrepreneurship</strong>.<br /><br />
             I founded <strong>Mittal Alliance Industries</strong> (2020) to help <strong>MSMEs with AI and digital transformation</strong>.<br />
             Then came <strong>BAD Youth Media, BadTalks</strong>, and a <strong>C++ WhatsApp community</strong> that grew to <strong>1,000+ members</strong>.<br /><br />
@@ -92,17 +92,17 @@ export default function Connect() {
             and the gift of <strong>real-world learning</strong>.
           </p>
         </div>
-        <img src={img30} alt="The Rise of an Entrepreneur" className="w-full lg:w-[400px] border-[4px] border-[#CE9D4B] object-cover" />
+        <img src={img30} alt="The Rise of an Entrepreneur" className="w-full lg:w-[350px] border-[4px] border-[#CE9D4B] object-cover" />
       </div>
 
       <div className="w-full h-[3px] bg-[#797979]" />
 
       {/* From BadBusiness to Badverse */}
       <div className="flex flex-col lg:flex-row gap-6 items-start">
-        <img src={img31} alt="BadBusiness to Badverse" className="w-full lg:w-[400px] border-[4px] border-[#CE9D4B] object-cover" />
+        <img src={img31} alt="BadBusiness to Badverse" className="w-full lg:w-[340px] border-[4px] border-[#CE9D4B] object-cover" />
         <div className="lg:w-2/3 space-y-4">
-          <h3 className="text-[#CE9D4B] text-[28px] font-bold uppercase text-center">From BadBusiness to Badverse</h3>
-          <p className="text-[18px] leading-[30px] text-justify">
+          <h3 className="text-[#CE9D4B] text-[28px] font-bold uppercase text-left ml-[60px]">From BadBusiness to Badverse</h3>
+          <p className="text-[18px] leading-[30px] text-justify ml-[60px] mt-[10px]">
             <strong>2024</strong> changed everything.<br /><br />
             I launched <strong>BadBusiness</strong>, a consulting firm — which became a huge success. It transformed into <strong>BADVERSE.IN</strong>,
             a <strong>global community of creators, leaders, and strategists</strong>.<br /><br />
@@ -115,7 +115,11 @@ export default function Connect() {
         </div>
       </div>
 
-      <div className="w-full h-[3px] bg-[#797979]" />
+      <div className="w-full bg-black pb-6">
+  <div className="w-full h-[3px] bg-[#797979] mb-[20px]" />
+</div>
+
+
     </div>
   );
 }

@@ -13,6 +13,14 @@ const testimonials = [
     img: a58,
     icons: [a59, a60],
   },
+   {
+    name: "Clay Boykin2222",
+    title: "Author | Thought Partner | Guide",
+    quote:
+      "Lorem1 ipsum Lorem1 ipsumLorem1 ipsumLorem1 ipsumLorem1 ipsum Lorem1 ipsumLorem1 ipsum22222",
+    img: a58,
+    icons: [a59, a60],
+  },
 ];
 
 export default function Testimonials() {
@@ -59,7 +67,7 @@ export default function Testimonials() {
           </div>
 
           {/* Quote Box */}
-          <div className="w-full max-w-[500px] px-4">
+          <div className="w-full max-w-[900px] px-4">
             <div className="bg-gray-100 pt-12 p-4 rounded-lg mx-auto w-[75%] relative">
               {/* Top Left Quote */}
               <img

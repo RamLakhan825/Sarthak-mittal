@@ -12,7 +12,7 @@ export default function Connect() {
 
   return (
     <>
-      <div className="bg-white py-10 px-4 lg:px-16 text-center">
+      <div className="bg-white py-10 px-4 lg:px-16 text-center font-montserrat">
         {/* Heading */}
         <h1 className="text-[#D0A151] text-[32px] font-bold uppercase underline leading-tight">
           Connect with me
@@ -23,14 +23,12 @@ export default function Connect() {
           {/* Title */}
           <p className="text-[20px] font-bold text-[#333]">Connect with Sarthak</p>
 
-          {/* Icons */}
-          <div className="grid grid-cols-3 gap-6 sm:flex sm:flex-wrap sm:justify-center">
+          {/* Icons (Flex for equal spacing in lg) */}
+          <div className="flex flex-wrap justify-center gap-6 lg:flex-nowrap lg:justify-between">
             {icons.map((icon, index) => (
               <div
                 key={index}
-                className={`w-[100px] h-[100px] border border-[#D0A151] rounded-[10px] flex items-center justify-center ${
-                  index === icons.length - 1 ? "col-span-3 mx-auto" : ""
-                }`}
+                className="w-[100px] h-[100px] border border-[#D0A151] rounded-[10px] flex items-center justify-center"
               >
                 <img
                   src={icon}

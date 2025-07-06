@@ -34,7 +34,7 @@ export default function Hero() {
         {/* Desktop Navbar */}
         <div className="relative z-10 w-full h-[100px] sm:flex hidden items-center justify-between px-8">
           {/* Logo */}
-          <div className="w-[180px] h-[90px] flex items-center">
+          <div className="w-[240px] h-[120px] flex items-center">
             <img src={a2} alt="Logo" className="h-full object-contain" />
           </div>
 
@@ -48,7 +48,7 @@ export default function Hero() {
           </ul>
 
           {/* CTA Image/Button */}
-          <div className="w-[120px] h-[30px] rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
+          <div className="w-[240px] h-[50px] rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
             <img src={a3} alt="CTA" className="w-full h-full object-cover" />
           </div>
         </div>
@@ -124,19 +124,21 @@ export default function Hero() {
           <p className="text-sm md:text-base leading-normal max-w-3xl px-2">
             I BUILD ICONIC PERSONAL BRANDS & REDEFINE CORPORATE IDENTITIES
             <br />
-            <span className="text-[#CE9D4B]">
+            <span className="text-white">
               Blending Soul & Strategy to Shape Legacy, Influence, and Impact
             </span>
           </p>
 
           {/* Audience Reach */}
-          <div className="text-[#CE9D4B] text-sm md:text-base uppercase tracking-wide">
-            My Work has reached audiences at
-          </div>
+          <div className="text-[#CE9D4B] text-sm md:text-base uppercase tracking-wide mt-6">
+  My Work has reached audiences at
+</div>
 
-          <div className="w-11/12 md:w-4/5">
-            <img src={a4} alt="Audience Logos" className="w-full object-contain" />
-          </div>
+
+          <div className="w-11/12 md:w-4/5 -mt-4">
+  <img src={a4} alt="Audience Logos" className="w-full object-contain" />
+</div>
+
 
           {/* Trusted By */}
           <div className="text-[#CE9D4B] text-base font-normal uppercase mt-4">
@@ -144,10 +146,12 @@ export default function Hero() {
           </div>
 
           {/* Description List */}
-          <p className="px-2 text-xs md:text-sm font-normal leading-relaxed max-w-5xl uppercase text-white">
-            Industry Icons | Conscious Companies | Soulful Celebrities | Internet Influencers | Passionate Professionals |
-            Solopreneurs | Industrialists | Legacy-Driven Leaders
-          </p>
+          <p className="px-2 text-xs md:text-sm font-normal leading-relaxed max-w-5xl uppercase text-white whitespace-normal lg:whitespace-nowrap text-center lg:ml-[-200px]">
+  Industry Icons | Conscious Companies | Soulful Celebrities | Internet Influencers | Passionate Professionals |
+  Solopreneurs | Industrialists | Legacy-Driven Leaders
+</p>
+
+
 
           {/* Trusted Logos */}
           <div className="w-full px-4">

@@ -13,10 +13,10 @@ export default function Footer() {
       </div>
 
       {/* Top Section */}
-      <div className="flex flex-col lg:flex-row flex-wrap gap-12 justify-between">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-4 justify-between">
         {/* Company Info */}
-        <div className="max-w-md space-y-6">
-          <div className="flex items-baseline gap-4">
+        <div className="max-w-md space-y-6 pl-[150px]">
+          <div className="flex items-baseline gap-4 ">
             <img src={a79} alt="Logo" className="w-10 h-10 object-contain" />
             <h1 className="text-[#D0A151] text-2xl font-bold">Sarthak Mittal</h1>
           </div>
@@ -30,7 +30,8 @@ export default function Footer() {
         </div>
 
         {/* Pages */}
-        <div className="space-y-3 min-w-[120px]">
+        <div className="space-y-5 min-w-[120px] -ml-30">
+
           <h1 className="text-xl font-bold text-white">Pages</h1>
           <p>Home</p>
           <p>Services</p>
@@ -41,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Company */}
-        <div className="space-y-3 min-w-[120px]">
+        <div className="space-y-6 min-w-[120px]">
           <h1 className="text-xl font-bold text-white">Company</h1>
           <p>Careers</p>
           <p>Support</p>
@@ -49,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Get In Touch */}
-        <div className="space-y-3 min-w-[160px]">
+        <div className="space-y-6 min-w-[160px] ml-[40px] pr-40">
           <h1 className="text-xl font-bold text-white">Get In Touch</h1>
           <p>Head Office</p>
           <p>Vijay Nagar Part II,</p>
