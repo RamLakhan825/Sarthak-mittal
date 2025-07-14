@@ -8,7 +8,7 @@ import Footer from "../components/footer.jsx";
 import Hero from "../components/hero.jsx";
 import Legacy from "../components/legacy.jsx";
 import Media from "../components/media.jsx";
-import Podcasts from "../components/podcasts.jsx";
+import Podcasts from "../components/Podcasts.jsx";
 import Result from "../components/result.jsx";
 import Services from "../components/services.jsx";
 import Struggle from "../components/struggle.jsx";
