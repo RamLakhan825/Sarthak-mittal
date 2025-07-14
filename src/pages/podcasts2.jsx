@@ -1,7 +1,7 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/podcasts2/navbar";
-import Podcasts21 from "../components/podcasts2/podcast_2";
-import Start from "../components/podcasts2/start";
+import Footer from "../components/Footer.jsx";
+import Navbar from "../components/podcasts2/navbar.jsx";
+import Podcasts21 from "../components/podcasts2/podcast_2.jsx";
+import Start from "../components/podcasts2/start.jsx";
 
 export default function Podcasts(){
     return (
