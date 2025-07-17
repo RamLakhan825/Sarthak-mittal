@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import a2 from "../../assets/2.png";   // logo
 import a3 from "../../assets/3.png";    // CTA button image
@@ -21,10 +22,17 @@ export default function Navbar() {
 
         <ul className="flex flex-wrap gap-4 text-gray-200 text-base font-normal">
           {navItems.map((item) => (
-            <li key={item} className="hover:text-blue-400 cursor-pointer">
-              {item}
-            </li>
-          ))}
+  <li key={item} className="hover:text-blue-400 cursor-pointer">
+    {item === "Podcasts" ? (
+      <Link to="/podcasts">{item}</Link>
+    ) : item === "Blogs" ? (
+      <Link to="/">{item}</Link>  // Assuming "Blogs" points to Home
+    ) : (
+      item
+    )}
+  </li>
+))}
+
         </ul>
 
         <div className="w-[240px] h-[50px] rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
@@ -60,14 +68,35 @@ export default function Navbar() {
             <img src={a2} alt="Logo" className="h-[50px] object-contain mx-auto" />
           </div>
 
-          {navItems.map((item) => (
-            <span
-              key={item}
-              className="text-white text-base text-center w-full py-2 hover:text-blue-400 cursor-pointer"
-            >
-              {item}
-            </span>
-          ))}
+          {navItems.map((item) =>
+  item === "Podcasts" ? (
+    <Link
+      to="/podcasts"
+      key={item}
+      onClick={() => setSidebarOpen(false)}
+      className="text-white text-base text-center w-full py-2 hover:text-blue-400 cursor-pointer"
+    >
+      {item}
+    </Link>
+  ) : item === "Blogs" ? (
+    <Link
+      to="/"
+      key={item}
+      onClick={() => setSidebarOpen(false)}
+      className="text-white text-base text-center w-full py-2 hover:text-blue-400 cursor-pointer"
+    >
+      {item}
+    </Link>
+  ) : (
+    <span
+      key={item}
+      className="text-white text-base text-center w-full py-2 cursor-pointer"
+    >
+      {item}
+    </span>
+  )
+)}
+
 
           <div className="w-[120px] h-[30px] mt-4 mx-auto rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
             <img src={a3} alt="CTA" className="w-full h-full object-cover" />

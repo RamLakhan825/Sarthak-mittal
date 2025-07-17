@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import a1 from "../assets/1.png";
 import a2 from "../assets/2.png"; // Logo
@@ -40,12 +41,17 @@ export default function Hero() {
 
           {/* Navigation */}
           <ul className="flex flex-wrap gap-4 text-gray-200 text-base font-normal">
-            {navItems.map((item) => (
-              <li key={item} className="hover:text-blue-400 cursor-pointer">
-                {item}
-              </li>
-            ))}
-          </ul>
+  {navItems.map((item) => (
+    <li key={item} className="hover:text-blue-400 cursor-pointer">
+      {item === "Podcasts" ? (
+        <Link to="/podcasts">{item}</Link>
+      ) : (
+        item
+      )}
+    </li>
+  ))}
+</ul>
+
 
           {/* CTA Image/Button */}
           <div className="w-[240px] h-[50px] rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
@@ -87,13 +93,20 @@ export default function Hero() {
 
             {/* Navigation Links */}
             {navItems.map((item) => (
-              <span
-                key={item}
-                className="text-white text-base text-center w-full py-2 hover:text-blue-400 cursor-pointer"
-              >
-                {item}
-              </span>
-            ))}
+  <span
+    key={item}
+    className="text-white text-base text-center w-full py-2 hover:text-blue-400 cursor-pointer"
+    onClick={() => {
+      if (item === "Podcasts") {
+        window.location.href = "/podcasts"; // quick redirect (or use Link with closing logic)
+      }
+      setSidebarOpen(false);
+    }}
+  >
+    {item}
+  </span>
+))}
+
 
             {/* CTA Button */}
             <div className="w-[120px] h-[30px] mt-4 mx-auto rounded-md overflow-hidden cursor-pointer hover:scale-105 transition-transform">
